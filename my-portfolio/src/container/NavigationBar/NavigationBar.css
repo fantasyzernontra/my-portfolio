@@ -1,0 +1,43 @@
+ul {
+  text-align: end;
+  width: 95%;
+  padding: 10px;
+}
+
+a,
+a:hover {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  padding-bottom: 3px;
+  margin-right: 50px;
+  font-size: 1.5em;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+li::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 4px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+li:hover::after {
+  cursor: pointer;
+  width: 100%;
+  background: #ff9baa;
+}
+
+li.active::after {
+  width: 100%;
+  background: #ff6187;
+}

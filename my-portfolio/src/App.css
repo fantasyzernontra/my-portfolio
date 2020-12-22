@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  font-family: Source Sans Pro, sans-serif;
+}
+
+.container {
+  flex-grow: 1;
+}
