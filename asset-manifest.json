@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a51f631b.chunk.css",
+    "main.js": "/static/js/main.6ff9cfa6.chunk.js",
+    "main.js.map": "/static/js/main.6ff9cfa6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d85ddbba.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d85ddbba.js.map",
+    "static/js/2.df23deb8.chunk.js": "/static/js/2.df23deb8.chunk.js",
+    "static/js/2.df23deb8.chunk.js.map": "/static/js/2.df23deb8.chunk.js.map",
+    "static/js/3.9bb9ba1d.chunk.js": "/static/js/3.9bb9ba1d.chunk.js",
+    "static/js/3.9bb9ba1d.chunk.js.map": "/static/js/3.9bb9ba1d.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.a51f631b.chunk.css.map": "/static/css/main.a51f631b.chunk.css.map",
+    "static/js/2.df23deb8.chunk.js.LICENSE.txt": "/static/js/2.df23deb8.chunk.js.LICENSE.txt",
+    "static/media/CSS.4e67641b.png": "/static/media/CSS.4e67641b.png",
+    "static/media/Java.cd9a7278.svg": "/static/media/Java.cd9a7278.svg",
+    "static/media/KMUTT.27fd9d34.png": "/static/media/KMUTT.27fd9d34.png",
+    "static/media/MC_logo.ba860cd1.png": "/static/media/MC_logo.ba860cd1.png",
+    "static/media/ProfilePicture.11ef59cd.jpg": "/static/media/ProfilePicture.11ef59cd.jpg",
+    "static/media/React.93a4bdf1.png": "/static/media/React.93a4bdf1.png",
+    "static/media/blender.937e89d7.png": "/static/media/blender.937e89d7.png",
+    "static/media/docker.c884bb50.png": "/static/media/docker.c884bb50.png",
+    "static/media/html.eea2b002.png": "/static/media/html.eea2b002.png",
+    "static/media/imovie.94cb334a.png": "/static/media/imovie.94cb334a.png",
+    "static/media/kubernetes.d74fa64a.png": "/static/media/kubernetes.d74fa64a.png",
+    "static/media/node.abfaef34.png": "/static/media/node.abfaef34.png",
+    "static/media/office365.a4e524e5.webp": "/static/media/office365.a4e524e5.webp",
+    "static/media/photoshop.f439232a.png": "/static/media/photoshop.f439232a.png",
+    "static/media/premiere_pro.ee49cf3a.png": "/static/media/premiere_pro.ee49cf3a.png",
+    "static/media/react-native.c60bc3bc.png": "/static/media/react-native.c60bc3bc.png",
+    "static/media/sql.974b4c5d.png": "/static/media/sql.974b4c5d.png",
+    "static/media/vue.48936141.png": "/static/media/vue.48936141.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d85ddbba.js",
+    "static/js/2.df23deb8.chunk.js",
+    "static/css/main.a51f631b.chunk.css",
+    "static/js/main.6ff9cfa6.chunk.js"
+  ]
+}
