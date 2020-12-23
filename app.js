@@ -8,4 +8,4 @@
     res.sendFile(path.join(__dirname, 'build', 'index.html'))
  })
 
- app.listen(9000, () => console.log('Server is listening on 9000'))
+ app.listen(process.env.PORT || 5000, () => console.log('Server is listening on 9000'))
