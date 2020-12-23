@@ -8,20 +8,22 @@ const Homepage = props => {
 
     return (
         <Aux>
-            <div className="animate">
-                <span>n</span>
-                <span>o</span>
-                <span>n</span>
+            <div className="Wrapper">
+                <div className="animate">
+                    <span>n</span>
+                    <span>o</span>
+                    <span>n</span>
                 &nbsp;
                 <span>p</span>
-                <span>o</span>
-                <span>r</span>
-                <span>t</span>
-                <span>f</span>
-                <span>o</span>
-                <span>l</span>
-                <span>i</span>
-                <span>o</span>
+                    <span>o</span>
+                    <span>r</span>
+                    <span>t</span>
+                    <span>f</span>
+                    <span>o</span>
+                    <span>l</span>
+                    <span>i</span>
+                    <span>o</span>
+                </div>
             </div>
         </Aux>
     )

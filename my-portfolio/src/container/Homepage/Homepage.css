@@ -1,8 +1,12 @@
+.Wrapper {
+  animation: increaseSize 1s forwards 2.6s;
+}
+
 .animate {
   font-size: 4.5em;
   margin: 250px auto;
   text-transform: uppercase;
-  width: 40%;
+  width: 60%;
   text-align: center;
   text-shadow: 3px 3px #5e4646;
   pointer-events: none;
@@ -19,6 +23,7 @@
   opacity: 0;
   transform: translate(-150px, 0) scale(0.3);
   animation: leftRight 0.5s forwards;
+  font-weight: 700;
 }
 
 /* .animate span:hover { 
@@ -93,6 +98,7 @@
   }
 
   60% {
+    
     color: #f8d5d5;
   }
 
@@ -118,6 +124,12 @@
   }
 }
 
+@keyframes increaseSize {
+  100% {
+    font-size: 1.5em;
+  }
+}
+
 /* For Moblile Devices - Portrait - Normal Size */
 @media only screen and (max-width: 414px) {
   .animate {
@@ -126,14 +138,6 @@
   }
 }
 
-For
-  Mobile
-  Devices
-  -
-  Landscape
-  -
-  Normal
-  Size
   @media
   only
   screen

@@ -14,12 +14,12 @@ a:hover {
 li {
   display: inline-block;
   padding-bottom: 3px;
-  margin-right: 50px;
+  padding-right: 50px;
   font-size: 1.5em;
 }
 
 li:last-child {
-  margin-right: 0;
+  padding-right: 0;
 }
 
 li::after {
@@ -41,3 +41,10 @@ li.active::after {
   width: 100%;
   background: #ff6187;
 }
+
+
+
+
+
+
+
