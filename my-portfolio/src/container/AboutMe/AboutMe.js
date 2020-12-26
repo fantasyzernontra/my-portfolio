@@ -2,26 +2,26 @@ import React from 'react'
 
 import Aux from '../../hoc/hoc'
 
-import ProfilePicture from '../../pictures/ProfilePicture.jpg'
-import MCLOGO from '../../pictures/MC_logo.png'
-import KMUTT from '../../pictures/KMUTT.png'
-import Java from '../../pictures/Java.svg'
-import HTML from '../../pictures/html.png'
-import CSS from '../../pictures/CSS.png'
-import JS from '../../pictures/javascript.png'
-import ReactJS from '../../pictures/React.png'
-import Vue from '../../pictures/vue.png'
-import NodeJS from '../../pictures/node.png'
-import ReactNative from '../../pictures/react-native.png'
-import Docker from '../../pictures/docker.png'
-import Kubernetes from '../../pictures/kubernetes.png'
-import NGINX from '../../pictures/nginx.png'
-import SQL from '../../pictures/sql.png'
-import Photoshop from '../../pictures/photoshop.png'
-import PremierePro from '../../pictures/premiere_pro.png'
-import Imovie from '../../pictures/imovie.png'
-import Blender from '../../pictures/blender.png'
-import Office365 from '../../pictures/office365.webp'
+import ProfilePicture from '../../pictures/Skills/ProfilePicture.jpg'
+import MCLOGO from '../../pictures/Skills/MC_logo.png'
+import KMUTT from '../../pictures/Skills/KMUTT.png'
+import Java from '../../pictures/Skills/Java.svg'
+import HTML from '../../pictures/Skills/html.png'
+import CSS from '../../pictures/Skills/CSS.png'
+import JS from '../../pictures/Skills/javascript.png'
+import ReactJS from '../../pictures/Skills/React.png'
+import Vue from '../../pictures/Skills/vue.png'
+import NodeJS from '../../pictures/Skills/node.png'
+import ReactNative from '../../pictures/Skills/react-native.png'
+import Docker from '../../pictures/Skills/docker.png'
+import Kubernetes from '../../pictures/Skills/kubernetes.png'
+import NGINX from '../../pictures/Skills/nginx.png'
+import SQL from '../../pictures/Skills/sql.png'
+import Photoshop from '../../pictures/Skills/photoshop.png'
+import PremierePro from '../../pictures/Skills/premiere_pro.png'
+import Imovie from '../../pictures/Skills/imovie.png'
+import Blender from '../../pictures/Skills/blender.png'
+import Office365 from '../../pictures/Skills/office365.webp'
 
 import './AboutMe.css'
 
@@ -30,20 +30,23 @@ const AboutMe = props => {
         <Aux>
             <div className="contentWrapper">
                 {/* Introduction Section */}
-                <div className="introduction">
-                    <div className="introductionEle1">
-                        <div className="Header">
-                            Who Am I?
+                <section id="introduction">
+                    <div className="introduction">
+                        <div className="introductionEle1">
+                            <div className="Header">
+                                Who Am I?
                         </div>
-                        <div className="Descrip">
-                            I’m a sophomore computer science student who hands-on with experience in Web-Development as “Full-Stack Developer” and Software Development. <br />And I’m curious about business and start-up.
+                            <div className="Descrip">
+                                I’m a sophomore computer science student who hands-on with experience in Web-Development as “Full-Stack Developer” and Software Development. <br />And I’m curious about business and start-up.
+                        </div>
+                        </div>
+                        <div className="introductionEle2">
+                            <img className="profile_picture" src={ProfilePicture} alt="Non Nontra" />
                         </div>
                     </div>
-                    <div className="introductionEle2">
-                        <img className="profile_picture" src={ProfilePicture} alt="Non Nontra" />
-                    </div>
-                </div>
+                </section>
                 {/* Education Section */}
+                <section id="education">
                 <div className="Header AnotherHeader" >Education</div>
                 <div className="education">
                     <div className="Montfort">
@@ -83,7 +86,9 @@ const AboutMe = props => {
                         </div>
                     </div>
                 </div>
+                </section>
                 {/* Skills Section */}
+                <section id="skills">
                 <div className="Header AnotherHeader">Skills</div>
                 <div className="SkillsSubheader">Programming Language</div>
                 <div className="ProgramLang">
@@ -120,8 +125,9 @@ const AboutMe = props => {
                 <div className="Documentation">
                     <div><img src={Office365} alt="Office365" height="130" className="office365" /></div>
                 </div>
-
+                </section> 
                 {/* Language Section */}
+                <section id="language">
                 <div className="Header AnotherHeader">Language</div>
                 <div className="Language">
                     <div className="ThaiEnglish LanguageSubHeader">
@@ -133,6 +139,7 @@ const AboutMe = props => {
                         <div>Intermediate</div>
                     </div>
                 </div>
+                </section>
             </div>
         </Aux>
     )

@@ -14,6 +14,8 @@ function App() {
         <Main />
       </div>
       <Footer />
+
+     
     </div>
   );
 }

@@ -1,0 +1,55 @@
+.contactWrapper .contactHeader{
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.contactWrapper {
+    width: 85%;
+    margin: 0 auto;
+    text-align: start;
+    /* font-weight: 700; */
+    font-size: 1.5rem;
+}
+
+.contactWrapper > div {
+    margin: 20px 0;
+}
+
+.mailIcon {
+    display: inline-block;
+    zoom: 2;
+    color: black;
+}
+
+.mailDesc {
+    display: inline-block;
+}
+
+.phoneIcon {
+    display: inline-block;
+    zoom: 1.5;
+    color: black;
+}
+
+.phoneDesc {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.githubDesc::before {
+    content: "";
+    align-items: center;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    background-image: url('../../pictures/Github.png');
+}
+
+.githubDesc {   
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+}
