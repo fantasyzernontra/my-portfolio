@@ -2,6 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -9,7 +14,6 @@ html {
   font-family: Source Sans Pro, sans-serif;
   font-weight: 400;
   color: #132743;
-  
 }
 
 .container {

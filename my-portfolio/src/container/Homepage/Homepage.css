@@ -1,12 +1,13 @@
-/* .Wrapper {
-  animation: increaseSize 1s forwards 2.6s;
-} */
+.Wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
 
 .animate {
   font-size: 4.5em;
-  margin: 250px auto;
+  margin: 200px auto;
   text-transform: uppercase;
-  width: 60%;
+  width: 50%;
   text-align: center;
   text-shadow: 3px 3px #5e4646;
   pointer-events: none;
@@ -26,11 +27,6 @@
   font-weight: 700;
 }
 
-/* .animate span:hover { 
-  font-size: 5rem;
-  transition: 0.4s;
-}  */
-
 .animate::after {
   content: "";
   display: block;
@@ -39,7 +35,7 @@
   width: 0px;
   background: transparent;
   animation: widthExpanding 1s forwards 2.6s;
-  text-shadow: 3px 3px #5e4646;
+  text-shadow: 3px 3px #ff6187;
 }
 
 .animate::before {
@@ -50,7 +46,7 @@
   width: 0px;
   background: transparent;
   animation: widthExpanding 1s forwards 2.6s;
-  text-shadow: 3px 3px #5e4646;
+  text-shadow: 3px 3px #ff6187;
 }
 
 .animate span:nth-of-type(2) {
@@ -98,7 +94,6 @@
   }
 
   60% {
-    
     color: #f8d5d5;
   }
 
@@ -120,7 +115,7 @@
 
   100% {
     width: 100%;
-    background-color: black;
+    background-color: #ff6187;
   }
 }
 
@@ -130,40 +125,30 @@
   }
 }
 
-/* For Moblile Devices - Portrait - Normal Size */
-@media only screen and (max-width: 414px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .animate {
-    font-size: 2.5em;
-    width: 85%;
+    
+    font-size: 2em;
+    width: 100%;
   }
 }
 
-  @media
-  only
-  screen
-  and
-  (max-height: 414px)
-  and
-  (max-width: 812px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
   .animate {
-    font-size: 2.5em;
-    margin: 150px auto;
-    width: 45%;
+    
+    font-size: 4.5em;
+    width: 95%;
   }
 }
 
-/* For Tablets Devices - Portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
   .animate {
+    
     font-size: 3.5em;
-    width: 60%;
+    width: 75%;
   }
 }
 
-/* For Tablets Devices - Landscape */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .animate {
-    font-size: 3.5em;
-    width: 45%;
-  }
-}

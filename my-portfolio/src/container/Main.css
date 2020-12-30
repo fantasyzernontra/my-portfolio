@@ -1,29 +1,17 @@
-.fade-enter {
-    opacity: .01;
+body {
+	background: linear-gradient(-45deg, #FF9BAA, #95bdcc, #ffffff);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
 }
 
-.fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 150ms ease-in;
-}
-
-.fade-exit {
-    opacity: 1;
-}
-
-.fade-exit.fade-exit-active {
-    opacity: .01;
-    transition: opacity 150ms ease-in;
-}
-
-.transition-group {
-    position: relative;
-}
-
-.route-section {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 100vh;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

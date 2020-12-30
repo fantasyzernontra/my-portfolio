@@ -1,3 +1,39 @@
+.Menu {
+  padding: 10px;
+  width: 95%;
+  text-align: end;
+  display: block;
+  font-size: 2em;
+}
+
+@media only screen and (max-width: 1024px){
+  .wrapper {
+    max-height: 0;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .3s ease, opacity .2s ease, max-height .2s ease-in;
+  }
+
+  .wrapper li {
+    display: block;
+    padding: 5px;
+    background-color: #a9d0dd;
+    border: 1px solid rgba(128, 128, 128, 0.171);
+  }
+
+  .wrapper ul {
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+    transition: .8s;
+  }
+
+  .wrapper li::after {
+    display: none;
+  }
+}
+
 ul {
   text-align: end;
   width: 95%;
@@ -41,10 +77,3 @@ li.active::after {
   width: 100%;
   background: #ff6187;
 }
-
-
-
-
-
-
-
