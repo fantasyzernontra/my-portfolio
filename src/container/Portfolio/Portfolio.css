@@ -1,0 +1,21 @@
+.contentWrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.Header {
+    font-size: 4rem;
+}
+
+.ProjectWrapper {
+    display: grid; 
+    gap: 40px;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 1025px) {
+    .ProjectWrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,8 +1,0 @@
-.footerContainer {
-    display: flex;
-    align-self: center;
-    justify-content: flex-end;
-    width: 90%;
-    padding: 20px;
-    font-size: 1.2em;
-}

@@ -1,0 +1,83 @@
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+  overflow: scroll;
+}
+
+.modalDialog > div {
+  overflow: scroll;
+  width: 60%;
+  height: 600px;
+  padding: 20px;
+  position: relative;
+  margin: 50px auto;
+  border-radius: 10px;
+  background: #eeeeee;
+}
+
+.closeDiv {
+  display: block;
+  width: 100%;
+  text-align: end;
+}
+
+.slides {
+    display: none;
+}
+
+.carouselImg img {
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px grey;
+    transition: .8s;
+}
+
+.carouselImg {
+    margin: 0 auto;
+    width: 80%;
+    display: block;
+}
+
+.ProjectDetail {
+    margin: 0 auto;
+    text-align: start;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.ProjectDetail .header {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.ProjectDetail .desc {
+    margin: 20px 0;
+}
+
+.techStack {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+span {
+    margin: 0 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .modalDialog > div {
+    width: 90%;
+    height: 100vh;
+    margin: 0;
+  }
+}

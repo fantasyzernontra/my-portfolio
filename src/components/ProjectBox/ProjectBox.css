@@ -1,0 +1,45 @@
+.boxWrapper {
+  width: 85%;
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 3px 3px 6px gray;
+  padding: 40px;
+  transition: 0.4s;
+  position: relative;
+  background-color: #eeeeee;
+  border: 1px solid grey;
+}
+
+.boxWrapper .bg {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+}
+
+.boxWrapper > div {
+  display: block;
+  position: relative;
+  top: 0.1em;
+  font-weight: 700;
+  opacity: 0.9;
+  transition: 0.6s;
+  font-size: 1.8rem;
+  color: #132743;
+}
+
+.boxWrapper > div:hover {
+    opacity: .9;
+}

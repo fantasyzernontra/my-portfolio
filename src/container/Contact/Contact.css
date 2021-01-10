@@ -1,0 +1,57 @@
+.contactWrapper .contactHeader{
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contactWrapper {
+    width: 85%;
+    margin: 0 auto;
+    text-align: start;
+    font-size: 1.5rem;
+}
+
+.contactEle {
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+
+.contactEle > div {
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.mailIcon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    background-image: url('../../pictures/mail-icon.png');
+}
+
+.phoneIcon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    background-image: url('../../pictures/tel-icon.jpg');
+}
+
+.githubIcon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    
+}
+
+@media only screen and (max-width: 1024px) {
+    .contactWrapper {
+        font-size: 1.3rem;
+    }
+}

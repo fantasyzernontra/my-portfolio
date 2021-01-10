@@ -1,0 +1,176 @@
+.contentWrapper {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  animation: expressing 0.8s ease forwards 0.5s;
+  opacity: 0;
+}
+
+.barContainer {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  font-weight: 400;
+  font-size: 1.3rem;
+  min-height: 50vh;
+}
+
+.barBorder {
+  border-radius: 7px;
+  width: 100%;
+  background-color: rgb(202, 202, 202);
+  box-shadow: 2px 2px 4px black;
+}
+
+.barValue {
+  border-radius: 3px;
+  height: 100%;
+  background-color: #ff6187;
+  font-weight: 400;
+  width: 0;
+}
+
+.expandingActive {
+  animation: expanding 1s ease forwards;
+}
+
+.eduContainer {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+.eduSchoolName {
+  font-weight: 400;
+}
+
+.introSpeech {
+  text-align: start;
+  margin: 70px auto;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+@keyframes expressing {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes expanding {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 1;
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.carousel:hover .slide:after,
+.carousel:hover .counter,
+.carousel:hover .slide:before {
+  opacity: 1;
+}
+.slide {
+  float: right;
+  position: absolute;
+  z-index: 1;
+  width: 500px;
+  height: 400px;
+  background-color: rgb(90, 90, 90);
+  text-align: center;
+  transition: opacity 0.4s;
+  opacity: 1;
+}
+.slide:before {
+  content: attr(annot);
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 300;
+  z-index: 12;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-shadow: 0 0 1px #000;
+}
+.slide:after {
+  content: attr(slide);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: opacity 0.3s;
+  width: 100%;
+  height: 80px;
+  opacity: 0;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  text-align: left;
+  text-indent: 549px;
+  line-height: 101px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 1px #000;
+}
+.DescCarousel {
+  font-weight: 400;
+}
+.faux_ui_facia {
+  top: 0;
+  right: 0;
+  float: right;
+  position: absolute;
+  margin-top: 0;
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.faux_ui_facia:checked {
+  z-index: 8;
+}
+.faux_ui_facia:checked + .slide {
+  opacity: 0;
+}
+.faux_ui_facia:checked:nth-child(1):checked {
+  z-index: 9;
+}
+.faux_ui_facia:nth-child(1):checked {
+  float: left;
+  z-index: 9;
+}
+.faux_ui_facia:nth-child(1):checked + .slide {
+  opacity: 1;
+}
+.faux_ui_facia:nth-child(1):checked ~ .faux_ui_facia {
+  float: left;
+  z-index: 8;
+}
+.faux_ui_facia:nth-child(1):checked ~ .faux_ui_facia + .slide {
+  opacity: 0;
+}
+.faux_ui_facia:nth-child(1):checked ~ .faux_ui_facia:checked {
+  z-index: 9;
+}
+.faux_ui_facia:nth-child(1):checked ~ .faux_ui_facia:checked + .slide {
+  opacity: 1;
+}

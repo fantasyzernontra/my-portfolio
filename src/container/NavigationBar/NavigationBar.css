@@ -1,0 +1,59 @@
+.wrapper {
+  width: 100%;
+  z-index: 10;
+}
+
+ul {
+  text-align: end;
+  width: 90%;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+a,
+a:hover {
+  color: #132743;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+li {
+  display: inline-block;
+  padding-bottom: 3px;
+  padding-right: 50px;
+  font-size: 1.5em;
+}
+
+li:last-child {
+  padding-right: 0;
+}
+
+li::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 4px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+li:hover::after {
+  cursor: pointer;
+  width: 100%;
+  background: #ff9baa;
+}
+
+li.active::after {
+  width: 100%;
+  background: #ff6187;
+}
+
+html:not([data-scroll="0"]) .wrapper {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  transition: .5s;
+}
