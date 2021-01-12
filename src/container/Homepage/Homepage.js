@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 
 import Aux from '../../hoc/hoc'
-import ProfilePicture from '../../pictures/Skills/ProfilePicture.jpg'
+import ProfilePicture from '../../pictures/Skills/ProfilePicture.webp'
 
 import styles from './Homepage.module.css'
 
@@ -20,17 +20,28 @@ const Homepage = props => {
 
     const changeNavLinkColor = () => {
         const NavLink = document.querySelectorAll('#navLink')
-        const Nav = document.querySelector('#nav')
-        Nav.style.backgroundColor = 'transparent'
+        const NavWrapper = document.querySelector('.wrapper')
+        const HamLine = document.querySelectorAll('.hamLine')
+        const navMobile = document.querySelector('.navMobile')
+        const navMBele = document.querySelectorAll('#navMBele')
+        NavWrapper.style.backgroundColor = 'transparent'
+        navMobile.style.backgroundColor = '#132743'
         for (let i = 0; i < NavLink.length; i++)
             NavLink[i].style.color = '#fff'
+        for (let i = 0; i < HamLine.length; i++)
+            HamLine[i].style.backgroundColor = '#fff'
+        for (let i = 0; i < navMBele.length; i++)
+            navMBele[i].style.color = '#fff'
     }
 
     const StartingColorEvent = () => {
         const Introduc = document.querySelector('#one')
         const IntroText = document.querySelectorAll('#onetext')
-        const Nav = document.querySelector('#nav')
         const NavLink = document.querySelectorAll('#navLink')
+        const NavWrapper = document.querySelector('.wrapper')
+        const HamLine = document.querySelectorAll('.hamLine')
+        const navMBele = document.querySelectorAll('#navMBele')
+        const navMobile = document.querySelector('.navMobile')
 
         const scrolledAmounts = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         const supportsAnimationFramed = (window.requestAnimationFrame.constructor === Function);
@@ -39,19 +50,30 @@ const Homepage = props => {
 
                 const topJa = Introduc.offsetTop
                 if (scrolledAmounts <= topJa) {
-                    Nav.style.backgroundColor = 'transparent'
+                    NavWrapper.style.backgroundColor = 'transparent'
                     document.body.style.backgroundColor = '#132743'
+                    navMobile.style.backgroundColor = '#132743'
                     for (let i = 0; i < IntroText.length; i++)
                         IntroText[i].style.color = '#fff'
                     for (let i = 0; i < NavLink.length; i++)
                         NavLink[i].style.color = '#fff'
+                    for (let i = 0; i < HamLine.length; i++)
+                        HamLine[i].style.backgroundColor = '#fff'
+                    for (let i = 0; i < navMBele.length; i++)
+                        navMBele[i].style.color = '#fff'
                 }
                 else {
-                    document.body.style.backgroundColor = 'white'
+                    NavWrapper.style.backgroundColor = '#fff'
+                    document.body.style.backgroundColor = '#fff'
+                    navMobile.style.backgroundColor = '#fff'
                     for (let i = 0; i < IntroText.length; i++)
                         IntroText[i].style.color = '#132743'
                     for (let i = 0; i < NavLink.length; i++)
                         NavLink[i].style.color = '#132743'
+                    for (let i = 0; i < HamLine.length; i++)
+                        HamLine[i].style.backgroundColor = '#132743'
+                    for (let i = 0; i < navMBele.length; i++)
+                        navMBele[i].style.color = '#132743'
                 }
 
             })
@@ -59,19 +81,30 @@ const Homepage = props => {
             setTimeout(() => {
                 const topJa = Introduc.offsetTop
                 if (scrolledAmounts <= topJa) {
-                    Nav.style.backgroundColor = 'transparent'
+                    NavWrapper.style.backgroundColor = 'transparent'
                     document.body.style.backgroundColor = '#132743'
+                    navMobile.style.backgroundColor = '#132743'
                     for (let i = 0; i < IntroText.length; i++)
                         IntroText[i].style.color = '#fff'
                     for (let i = 0; i < NavLink.length; i++)
                         NavLink[i].style.color = '#fff'
+                    for (let i = 0; i < HamLine.length; i++)
+                        HamLine[i].style.backgroundColor = '#fff'
+                    for (let i = 0; i < navMBele.length; i++)
+                        navMBele[i].style.color = '#fff'
                 }
                 else {
-                    document.body.style.backgroundColor = 'white'
+                    NavWrapper.style.backgroundColor = '#fff'
+                    document.body.style.backgroundColor = '#fff'
+                    navMobile.style.backgroundColor = '#fff'
                     for (let i = 0; i < IntroText.length; i++)
                         IntroText[i].style.color = '#132743'
                     for (let i = 0; i < NavLink.length; i++)
                         NavLink[i].style.color = '#132743'
+                    for (let i = 0; i < HamLine.length; i++)
+                        HamLine[i].style.backgroundColor = '#132743'
+                    for (let i = 0; i < navMBele.length; i++)
+                        navMBele[i].style.color = '#132743'
                 }
             }, 500)
         }

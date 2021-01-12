@@ -1,6 +1,43 @@
 .wrapper {
   width: 100%;
-  z-index: 10;
+  z-index: 20;
+  transition: 1.2s;
+}
+
+.hamburgerContainer {
+  display: none;
+}
+
+.navMobile {
+  position: fixed;
+  background-color: #fff;
+  transition: .6s;
+  opacity: .5;
+  overflow: hidden;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+}
+
+.navMobile > div {
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.navMobile a {
+  color: #132743;
+  text-decoration: none;
+}
+
+.navMobile .closeBtn {
+  color: #132743;
+  text-align: end;
+  width: 85%;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 ul {
@@ -8,11 +45,11 @@ ul {
   width: 90%;
   padding: 10px;
   margin-top: 30px;
+  transition: 1.2s;
 }
 
 a,
 a:hover {
-  color: #132743;
   cursor: pointer;
   text-decoration: none;
   font-weight: 200;
@@ -56,4 +93,29 @@ html:not([data-scroll="0"]) .wrapper {
   background-color: #fff;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
   transition: .5s;
+}
+
+@media only screen and (max-width: 600px) {
+  ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .hamLine {
+    background-color: #132743;
+    width: 33px;
+    height: 5px;
+    margin: 3px;
+    transition: .3s;
+  }
+
+  .hamburgerContainer {
+    display: block;
+    padding: 20px;
+  }
 }

@@ -1,6 +1,6 @@
 .contactWrapper .contactHeader{
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -10,6 +10,69 @@
     margin: 0 auto;
     text-align: start;
     font-size: 1.5rem;
+}
+
+.contactBody {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 75%;
+    border-radius: 10px;
+    background-color: #ff9baa;
+    padding: 20px;
+    box-shadow: 2px 1px 6px black;
+}
+
+.contactForm .formHeader {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.contactForm .formSubHeader {
+    font-weight: 200;
+}
+
+.contactForm .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm .form input {
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 200;
+    padding: 3px;
+    font-family: Source Sans Pro, sans-serif;
+}
+
+.contactForm .form textarea {
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 200;
+    padding: 3px;
+    font-family: Source Sans Pro, sans-serif;
+}
+
+.buttonDiv {
+    text-align: end;
+}
+
+.messageButton {
+    width: 40%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 200;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: Source Sans Pro, sans-serif;
+    box-shadow: 1px 2px 3px black;
 }
 
 .contactEle {
@@ -32,6 +95,10 @@
     background-image: url('../../pictures/mail-icon.png');
 }
 
+.mailDesc {
+    font-weight: 200;
+}
+
 .phoneIcon {
     display: inline-block;
     background-repeat: no-repeat;
@@ -41,17 +108,66 @@
     background-image: url('../../pictures/tel-icon.jpg');
 }
 
+.phoneDesc a{
+    color: #132743;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.phoneDesc a:hover {
+    font-weight: 400;
+    text-decoration: underline;
+}
+
 .githubIcon {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
     height: 50px;
     width: 50px;
-    
+    background-image: url('../../pictures/GitHub-Logo.png')
 }
 
-@media only screen and (max-width: 1024px) {
+.linkedInIcon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    background-image: url('../../pictures/linkedin-icon.png')
+}
+
+.gitHubLink a {
+    color: #132743;
+    text-decoration: underline;
+}
+
+.linkedInLink a {
+    color: #132743;
+    text-decoration: underline;
+}
+
+.gitHubLink a:hover {
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.linkedInLink a:hover {
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
     .contactWrapper {
         font-size: 1.3rem;
+    }
+
+    .contactBody {
+        grid-template-columns: repeat(1 ,1fr);
+        gap: 40px;
+    }
+
+    .contactForm {
+        width: 90%;
     }
 }

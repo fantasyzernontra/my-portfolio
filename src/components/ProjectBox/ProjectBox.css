@@ -7,12 +7,10 @@
   flex-direction: column;
   border-radius: 13px;
   overflow: hidden;
-  box-shadow: 3px 3px 6px gray;
+  box-shadow: 4px 5px 6px gray;
   padding: 40px;
   transition: 0.4s;
   position: relative;
-  background-color: #eeeeee;
-  border: 1px solid grey;
 }
 
 .boxWrapper .bg {
@@ -21,7 +19,7 @@
   background-size: 50%;
   background-position: center;
   position: absolute;
-  opacity: 0.6;
+  opacity: 1;
   top: 0;
   bottom: 0;
   right: 0;
@@ -41,5 +39,6 @@
 }
 
 .boxWrapper > div:hover {
-    opacity: .9;
+    background-color: #ff9baa;
+    opacity: .7
 }

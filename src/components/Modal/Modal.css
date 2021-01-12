@@ -5,7 +5,7 @@
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 10;
+  z-index: 200;
   opacity: 0;
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
@@ -20,9 +20,32 @@
   height: 600px;
   padding: 20px;
   position: relative;
+  z-index: 200;
   margin: 50px auto;
   border-radius: 10px;
-  background: #eeeeee;
+  background: #fff;
+  z-index: 200;
+}
+
+.buttonImg {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.buttonImg button {
+  font-size: 1.3rem;
+  padding: 5px;
+  color: #132743;
+  width: 30px;
+  border-radius: 2px;
+  border: 1px solid grey;
+}
+
+.buttonImg button:hover {
+  color: #ff6187;
+  background-color: #ff9baa;
 }
 
 .closeDiv {
@@ -31,47 +54,65 @@
   text-align: end;
 }
 
+.closeDiv button {
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 3px;
+  color: #132743;
+}
+
+.closeDiv button:hover {
+  color: #ff6187;
+  background-color: #ff9baa;
+}
+
 .slides {
-    display: none;
+  display: none;
 }
 
 .carouselImg img {
-    border-radius: 10px;
-    box-shadow: 2px 2px 3px grey;
-    transition: .8s;
+  box-shadow: 2px 2px 6px grey;
+  transition: 0.8s;
+  margin: 0 auto;
+  transition: 0.8s;
+  opacity: 0;
 }
 
 .carouselImg {
-    margin: 0 auto;
-    width: 80%;
-    display: block;
+  margin: 0 auto;
+  width: 80%;
+  display: block;
 }
 
 .ProjectDetail {
-    margin: 0 auto;
-    text-align: start;
-    justify-content: center;
-    justify-items: center;
-    width: 100%;
+  margin: 0 auto;
+  text-align: start;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
 }
 
 .ProjectDetail .header {
-    font-weight: 700;
-    font-size: 1.2em;
-    margin: 20px 0;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 20px 0;
 }
 
 .ProjectDetail .desc {
-    margin: 20px 0;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 .techStack {
-    font-weight: 700;
-    font-size: 1.2em;
+  font-weight: 400;
+  font-size: 2em;
 }
 
 span {
-    margin: 0 5px;
+  margin: 0 5px;
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 @media only screen and (max-width: 1024px) {

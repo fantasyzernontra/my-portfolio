@@ -13,10 +13,10 @@ const Main = props => {
     return (
         <Aux>
             <Switch>
-                <Route exact path="/" component={Homepage} />
-                <Route path="/About" component={About} />
-                <Route path="/Work" component={Portfolio} />
-                <Route path="/Contact" component={Contact} />
+                <Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage} />
+                <Route exact path={`${process.env.PUBLIC_URL}/About`} component={About} />
+                <Route exact path={`${process.env.PUBLIC_URL}/Work`} component={Portfolio} />
+                <Route exact path={`${process.env.PUBLIC_URL}/Contact`} component={Contact} />
             </Switch>
         </Aux>
     )

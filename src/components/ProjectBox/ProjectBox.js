@@ -14,6 +14,12 @@ const ProjectBox = props => {
         let modal = document.querySelector(`#openModal${props.modalName}`)
         modal.style.opacity = "1"
         modal.style.pointerEvents = 'auto'
+        if (document.documentElement.dataset.scroll === "0") {
+            const navLink = document.querySelector('#Work')
+            navLink.classList.remove('active')
+        }
+
+        document.querySelector('.wrapper').style.zIndex = '-100'
     }
 
     return (
@@ -22,7 +28,7 @@ const ProjectBox = props => {
                 <div className="bg" style={bgUrl}></div>
                 <div>{props.ProjectName}</div>
             </div>
-            <Modal key={props.ProjectName} img={props.img} modalName={props.modalName} ProjectName={props.ProjectName} desc={props.desc} techStack={props.techStack} />           
+            <Modal key={props.ProjectName} img={props.img} modalName={props.modalName} ProjectName={props.ProjectName} desc={props.desc} techStack={props.techStack} />
         </Aux>
     )
 }

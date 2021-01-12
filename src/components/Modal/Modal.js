@@ -1,22 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useRef, useEffect, useCallback } from 'react'
 
 import Aux from '../../hoc/hoc'
 
 import './Modal.css'
 
-import { showDivs } from '../../utils/CarouselUtil'
-
 const Modal = props => {
-    let slideIndex = 1;
+    const slideIndexRef = useRef(null)
     let carouselImg = null
-
-    useEffect(() => {
-        showDivs(slideIndex, document.getElementsByClassName(`slides${props.modalName}`), slideIndex)
-    }, [slideIndex, props.modalName])
 
     const closeHandler = () => {
         document.querySelector(`#openModal${props.modalName}`).style.opacity = '0'
         document.querySelector(`#openModal${props.modalName}`).style.pointerEvents = 'none'
+        const navLink = document.querySelector('#Work')
+        navLink.classList.add('active')
+        document.querySelector('.wrapper').style.zIndex = '20'
     }
 
     const propIMG = props.img
@@ -35,11 +32,34 @@ const Modal = props => {
         })
     }
 
+    const showDivs = useCallback((n) => {
+        const slideDom = document.getElementsByClassName(`slides${props.modalName}`)
+        if (n > slideDom.length) {
+            slideIndexRef.current = 1
+        }
+        if (n < 1) {
+            slideIndexRef.current = slideDom.length
+        }
+        for (let i = 0; i < slideDom.length; i++) {
+            slideDom[i].style.opacity = "0";
+            slideDom[i].style.display = "none";
+        }
+        slideDom[slideIndexRef.current - 1].style.display = "block";
+        slideDom[slideIndexRef.current - 1].style.opacity = '1';
+    
+    }, [props.modalName])
+
+    useEffect(() => {
+        slideIndexRef.current = 1
+        showDivs(slideIndexRef.current)
+    }, [showDivs])
+ 
+
     return (
         <Aux>
             <div id={`openModal${props.modalName}`} className="modalDialog">
                 <div>
-                    <div className="closeDiv"> 
+                    <div className="closeDiv">
                         <button onClick={closeHandler} className="close">X</button>
                     </div>
                     <div>
@@ -47,10 +67,14 @@ const Modal = props => {
                             {carouselImg}
                         </div>
                         <div className="buttonImg">
-                            <button onClick={() => showDivs(slideIndex += -1, document.getElementsByClassName(`slides${props.modalName}`), slideIndex)}>
+                            <button onClick={() => {
+                                showDivs(slideIndexRef.current -= 1)
+                            }}>
                                 &#10094;
                         </button>
-                            <button onClick={() => showDivs(slideIndex += 1, document.getElementsByClassName(`slides${props.modalName}`), slideIndex)}>
+                            <button onClick={() => {
+                                showDivs(slideIndexRef.current += 1)
+                            }}>
                                 &#10095;
                         </button>
                         </div>

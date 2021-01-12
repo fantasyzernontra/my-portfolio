@@ -38,6 +38,7 @@ const data = [
     },
     {
         "proj_name": 'CSB',
+        "modalName": 'CSB',
         "brief_desc": 'Online Banking',
         "logo": require('../../pictures/CSB/CSB_Logo.webp'),
         "desc": "CSB is a simulation of reality online banking that we use nowadays. This project was included in CSC105-Web Development course. CSB includes Authentication, Account System, Loaning, Transaction System, Manager System.",
@@ -68,6 +69,41 @@ const data = [
             "Docker"
         ]
 
+    },
+    {
+        "proj_name": "Eduroom",
+        "modalName": 'Edu',
+        "brief_desc": "Online Learning Platform",
+        "logo": require('../../pictures/Eduroom/eduroom_logo.png'),
+        "desc": "Eduroom is a online learning platform which include in CSC290-Computer Science Integrated Project 1. I learnt about how to use PowerBI and get through how incredible it is.",
+        "pics": [
+            {
+                src: 'Eduroom/Landing.webp',
+                alt: 'Landing Page'
+            },
+            {
+                src: 'Eduroom/Course.webp',
+                alt: 'Course Page'
+            },
+            {
+                src: 'Eduroom/AdminLanding.webp',
+                alt: 'Admin Landing Page'
+            },
+            {
+                src: 'Eduroom/POWERBI.webp',
+                alt: 'POWERBI'
+            },
+        ],
+        techStack: [
+            "Next.JS",
+            "Express.JS",
+            "Node.JS",
+            "Material-UI",
+            "MySQL",
+            "NGINX",
+            "Docker",
+            "Kubernetes"
+        ]
     }
 ]
 
