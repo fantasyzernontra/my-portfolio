@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback } from 'react'
 
 import Aux from '../../hoc/hoc'
 import ProfilePicture from '../../pictures/Skills/ProfilePicture.webp'
@@ -6,17 +6,6 @@ import ProfilePicture from '../../pictures/Skills/ProfilePicture.webp'
 import styles from './Homepage.module.css'
 
 const Homepage = props => {
-
-    useEffect(() => {
-        document.body.scrollTop = 0
-        document.documentElement.scrollTop = 0
-        document.documentElement.dataset.scroll = 0
-        document.body.style.backgroundColor = '#132743'
-        changeNavLinkColor()
-        window.addEventListener('scroll', StartingColorEvent)
-
-        return () => window.removeEventListener('scroll', StartingColorEvent)
-    }, [])
 
     const changeNavLinkColor = () => {
         const NavLink = document.querySelectorAll('#navLink')
@@ -34,8 +23,7 @@ const Homepage = props => {
             navMBele[i].style.color = '#fff'
     }
 
-    const StartingColorEvent = () => {
-        const Introduc = document.querySelector('#one')
+    const StartingColorEvent = useCallback(e => {      
         const IntroText = document.querySelectorAll('#onetext')
         const NavLink = document.querySelectorAll('#navLink')
         const NavWrapper = document.querySelector('.wrapper')
@@ -47,10 +35,10 @@ const Homepage = props => {
         const supportsAnimationFramed = (window.requestAnimationFrame.constructor === Function);
         if (supportsAnimationFramed) {
             window.requestAnimationFrame(() => {
-
-                const topJa = Introduc.offsetTop
-                if (scrolledAmounts <= topJa) {
+                
+                if (scrolledAmounts <= 10) {
                     NavWrapper.style.backgroundColor = 'transparent'
+                    NavWrapper.style.boxShadow = '0 0 0 #fff'
                     document.body.style.backgroundColor = '#132743'
                     navMobile.style.backgroundColor = '#132743'
                     for (let i = 0; i < IntroText.length; i++)
@@ -64,6 +52,7 @@ const Homepage = props => {
                 }
                 else {
                     NavWrapper.style.backgroundColor = '#fff'
+                    NavWrapper.style.boxShadow = '0 0 0.5em rgba(0, 0, 0, 0.5)'
                     document.body.style.backgroundColor = '#fff'
                     navMobile.style.backgroundColor = '#fff'
                     for (let i = 0; i < IntroText.length; i++)
@@ -79,9 +68,9 @@ const Homepage = props => {
             })
         } else {
             setTimeout(() => {
-                const topJa = Introduc.offsetTop
-                if (scrolledAmounts <= topJa) {
+                if (scrolledAmounts <= 10) {
                     NavWrapper.style.backgroundColor = 'transparent'
+                    NavWrapper.style.boxShadow = '0 0 0 #fff'
                     document.body.style.backgroundColor = '#132743'
                     navMobile.style.backgroundColor = '#132743'
                     for (let i = 0; i < IntroText.length; i++)
@@ -95,6 +84,7 @@ const Homepage = props => {
                 }
                 else {
                     NavWrapper.style.backgroundColor = '#fff'
+                    NavWrapper.style.boxShadow = '0 0 0.5em rgba(0, 0, 0, 0.5)'
                     document.body.style.backgroundColor = '#fff'
                     navMobile.style.backgroundColor = '#fff'
                     for (let i = 0; i < IntroText.length; i++)
@@ -108,7 +98,20 @@ const Homepage = props => {
                 }
             }, 500)
         }
-    }
+
+        
+    }, [])
+
+    useEffect(() => {
+        document.body.scrollTop = 0
+        document.documentElement.scrollTop = 0
+        document.documentElement.dataset.scroll = 0
+        document.body.style.backgroundColor = '#132743'
+        changeNavLinkColor()
+        window.addEventListener('scroll', StartingColorEvent)
+
+        return () => window.removeEventListener('scroll', StartingColorEvent)
+    }, [StartingColorEvent])
 
     return (
         <Aux>
@@ -117,7 +120,7 @@ const Homepage = props => {
                     <div className={styles.Text} id="onetext">Non Nontra<div className={styles.Dot}>.</div></div>
                     <div className={styles.Text} id="onetext">Full Stack Developer<div className={styles.Dot}>.</div></div>
                 </section>
-                <section className={styles.Briefly} id="two">
+                <section className={`${styles.Briefly} two`} id="two">
                     <div className={styles.IntroContainer}>
                         <div className={styles.profile_pic}><img className={styles.profile_picture} src={ProfilePicture} alt="Non Nontra" /></div>
                         <div className={styles.briefIntro}>I’m a computer science student who hands on with experience on Web-Development. I am interested in technology, data science, business, financial and investment. <br /><br />Moreover, I am a reader and fitness person. </div>

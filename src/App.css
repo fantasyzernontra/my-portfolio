@@ -1,9 +1,10 @@
 html {
   scroll-behavior: smooth;
+  overflow: auto;
 }
 
 body {
-  transition: 1.2s;
+  transition: .6s;
   margin: 0;
   padding: 0;
 }

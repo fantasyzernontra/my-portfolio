@@ -33,12 +33,12 @@
 }
 
 .Introduction {
-  animation: fadeIn 1.5s ease forwards 0.5s;
+  animation: fadeIn 1s ease forwards 0.5s;
   opacity: 0;
-  margin-top: 10%;
   transform: translateY(20%);
-  min-height: 100vh;
-  transition: 1.5s;
+  transition: 1s;
+  margin-top: 10%;
+  height: 80vh;
 }
 
 .IntroContainer {
@@ -77,9 +77,12 @@
 
 .Briefly {
   transition: 1.5s;
-  height: 60vh;
   opacity: 0;
   animation: fadeIn 1.5s ease forwards 0.5s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 70vh;
 }
 
 .Briefly .briefIntro {
@@ -109,18 +112,14 @@
   }
 
   .Introduction {
-    min-height: 90vh;
-    margin-top: 150px;
+    height: 80vh;
+    margin-top: 100px;
   }
 
   .Briefly .briefIntro {
     margin-top: 40px;
     font-size: 1.4rem;
     width: 85%;
-  }
-
-  .Briefly {
-    min-height: 100vh;
   }
 
   .profile_pic {
@@ -131,8 +130,8 @@
 
 @media only screen and (min-width: 376px) and (max-width: 414px) {
   .Introduction {
-    min-height: 90vh;
     margin-top: 150px;
+    min-height: 100vh;
   }
 
   .Wrapper {

@@ -8,12 +8,14 @@ const Modal = props => {
     const slideIndexRef = useRef(null)
     let carouselImg = null
 
-    const closeHandler = () => {
-        document.querySelector(`#openModal${props.modalName}`).style.opacity = '0'
-        document.querySelector(`#openModal${props.modalName}`).style.pointerEvents = 'none'
-        const navLink = document.querySelector('#Work')
-        navLink.classList.add('active')
-        document.querySelector('.wrapper').style.zIndex = '20'
+    const closeHandler = e => {
+        if (e.target.id.includes('openModal') || e.target.id.includes('closeBTN')) {
+            document.querySelector(`#openModal${props.modalName}`).style.opacity = '0'
+            document.querySelector(`#openModal${props.modalName}`).style.pointerEvents = 'none'
+            const navLink = document.querySelector('#Work')
+            navLink.classList.add('active')
+            document.querySelector('.wrapper').style.zIndex = '20'
+        }
     }
 
     const propIMG = props.img
@@ -46,21 +48,21 @@ const Modal = props => {
         }
         slideDom[slideIndexRef.current - 1].style.display = "block";
         slideDom[slideIndexRef.current - 1].style.opacity = '1';
-    
+
     }, [props.modalName])
 
     useEffect(() => {
         slideIndexRef.current = 1
         showDivs(slideIndexRef.current)
     }, [showDivs])
- 
+
 
     return (
         <Aux>
-            <div id={`openModal${props.modalName}`} className="modalDialog">
+            <div id={`openModal${props.modalName}`} className="modalDialog" onClick={e => closeHandler(e)}>
                 <div>
                     <div className="closeDiv">
-                        <button onClick={closeHandler} className="close">X</button>
+                        <button onClick={closeHandler} className="close" id="closeBTN">X</button>
                     </div>
                     <div>
                         <div className="carouselImg">

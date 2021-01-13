@@ -40,6 +40,8 @@ const Contact = props => {
         msg: ''
     })
 
+    const [msgStatus, setMsgStatus] = useState('')
+
     const inputChangeHandler = e => {
         setMessage({ ...message, [e.target.name]: [e.target.value] })
     }
@@ -48,15 +50,14 @@ const Contact = props => {
         await fetch('https://nonnontra-portfolioapi.azurewebsites.net/recieveMessage', {
             method: 'POST',
             mode: 'cors',
-            credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(message)
-        }).then(() => {
-            alert('Your message has sent. I would contact your back asap!!!')
+        }).then(data => {
+            setMsgStatus('Your message has sent.')
             window.location.reload()
-        }).catch(err => console.log(err))
+        }).catch(err => setMsgStatus('Something went wrong. Please try again.'))
     }
 
     return (
@@ -75,6 +76,7 @@ const Contact = props => {
                             <label html="msg">Your Message</label>
                             <textarea name="msg" rows="3" onChange={inputChangeHandler} value={message.msg} />
                         </div>
+                        <div>{msgStatus}</div>
                         <div className="buttonDiv">
                             <button className="messageButton" onClick={submitMessage} >Send Message</button>
                         </div>

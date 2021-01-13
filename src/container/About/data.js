@@ -15,7 +15,7 @@ const data = {
     ],
     education: [
         {schoolName: 'Montfort College Secondary School', desc: 'High School 2012-2018', dep: ['Science-Math Program', 'GIFTED THAI PROGRAM'], grade: 'GPAX 3.30' },
-        {schoolName: "King Mongkut's University of Technology Thonburi", desc: 'University 2019-Now', dep: ['Bachelor of Computer Science, School of Information Technology'], grade: 'GPAX 3.12' }
+        {schoolName: "King Mongkut's University of Technology Thonburi", desc: 'University 2019-Now', dep: ['Bachelor of Computer Science', ', School of Information Technology'], grade: 'GPAX 3.12' }
     ]
 }
 

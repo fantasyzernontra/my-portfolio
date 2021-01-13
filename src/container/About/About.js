@@ -23,6 +23,7 @@ const About = props => {
         const HamLine = document.querySelectorAll('.hamLine')
         const navMobile = document.querySelector('.navMobile')
         const navMBele = document.querySelectorAll('#navMBele')
+        NavWrapper.style.boxShadow = '0 0 0.5em rgba(0, 0, 0, 0.5)'
         NavWrapper.style.backgroundColor = '#fff'
         navMobile.style.backgroundColor = '#fff'
         for (let i = 0; i < NavLink.length; i++)
@@ -37,23 +38,25 @@ const About = props => {
     const BarProgressEvent = useCallback(() => {
         const barPro = document.querySelector('.barpro')
 
-        var scrolledAmount = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        var supportsAnimationFrame = (window.requestAnimationFrame.constructor === Function);
-        if (supportsAnimationFrame) {
-            window.requestAnimationFrame(() => {
+        if (barPro) {
+            var scrolledAmount = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            var supportsAnimationFrame = (window.requestAnimationFrame.constructor === Function);
+            if (supportsAnimationFrame && path === '/About') {
+                window.requestAnimationFrame(() => {
 
-                var topAt = window.innerWidth > 1080 ? barPro.offsetTop - 150 : barPro.offsetTop - 200
-                if (scrolledAmount >= topAt && path === '/About') {
-                    setExpandingStatus(true)
-                }
-            })
-        } else {
-            setTimeout(() => {
-                var topAt = window.innerWidth > 1080 ? barPro.offsetTop - 150 : barPro.offsetTop - 200
-                if (scrolledAmount >= topAt && path === '/About') {
-                    setExpandingStatus(true)
-                }
-            }, 500)
+                    var topAt = window.innerWidth > 1080 ? barPro.offsetTop - 150 : barPro.offsetTop - 200
+                    if (scrolledAmount >= topAt && path === '/About') {
+                        setExpandingStatus(true)
+                    }
+                })
+            } else {
+                setTimeout(() => {
+                    var topAt = window.innerWidth > 1080 ? barPro.offsetTop - 150 : barPro.offsetTop - 200
+                    if (scrolledAmount >= topAt && path === '/About') {
+                        setExpandingStatus(true)
+                    }
+                }, 500)
+            }
         }
     }, [path])
 
@@ -101,7 +104,7 @@ const About = props => {
                     </div>
                 </div>
                 <div className={styles.DescCarousel}>Press the box to see the next picture</div>
-                <section className={`${styles.introSpeech} introspeech`}>
+                <section className={`${styles.introSpeech} introspeech`} onScroll={() => document.querySelector('.test').scrollIntoView({ behavior: 'smooth' })}>
                     I’m a Thai native. I live in Chiangmai, Nothern region of Thailand.
                     Currently, I’m studying Computer Science at King Mongkut’s University of Technology Thonburi.
                     I do curious and passionate about technology and business. I’m eager to learn  about Data Science, Investment,
@@ -127,17 +130,18 @@ const About = props => {
                     {data.education.map(edu => {
                         return (<div>
                             <div className={styles.eduEle}>
-                                <div className={styles.eduImg}>
+                                <div className={`${styles.eduImg} test`}>
                                     <img src={edu.schoolName.includes('Montfort') ? MC : KMUTT} alt={edu.schoolName.includes('Montfort') ? 'MC' : 'KMUTT'} width="300" />
                                 </div>
                                 <div className={styles.eduSchoolName}>{edu.schoolName}</div>
-                                <div>{edu.desc}</div>
-                                {edu.dep.map(dept => {
-                                    return (<Aux>
-                                        <div>{dept}</div>
-                                    </Aux>)
-                                })}
-                                <div>{edu.grade}</div>
+                                <div className={styles.eduEleDetails}>
+                                    {edu.dep.map(dept => {
+                                        return (<Aux>
+                                            <div>{dept}</div>
+                                        </Aux>)
+                                    })}
+                                    <div>{edu.grade}</div>
+                                </div>
                             </div>
                         </div>)
                     })}
