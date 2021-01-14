@@ -18,13 +18,17 @@
   overflow: auto;
   width: 60%;
   height: 600px;
-  padding: 30px;
+  padding: 50px;
   position: relative;
   z-index: 200;
   margin: 50px auto;
   border-radius: 10px;
   background: #fff;
   z-index: 200;
+}
+
+.modalDiv {
+  background-color: red;
 }
 
 .buttonImg {
@@ -80,7 +84,7 @@
 
 .carouselImg {
   margin: 0 auto;
-  width: 80%;
+  /* width: 80%; */
   display: block;
 }
 
@@ -89,7 +93,7 @@
   text-align: start;
   justify-content: center;
   justify-items: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .ProjectDetail .header {
@@ -117,8 +121,43 @@ span {
 
 @media only screen and (max-width: 1024px) {
   .modalDialog > div {
-    width: 90%;
-    height: 100vh;
+    width: 95%;
+    height: 100%;
     margin: 0;
+    padding: 10px;
+  }
+
+  .carouselImg {
+    margin: 0 auto;
+  }
+
+  .ProjectDetail .header {
+    font-size: 1.7rem;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .ProjectDetail .desc {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+  }
+
+  .techStack {
+    width: 90%;
+    margin: 20px auto;
+    font-weight: 400;
+    font-size: 1.7rem;
+  }
+
+  .techStackDetail {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  span {
+    width: 90%;
+    margin: 0 3px;
+    font-size: 1.4rem;
   }
 }

@@ -59,10 +59,11 @@
 
 .introSpeech {
   text-align: start;
-  margin: 70px auto;
-  font-size: 1.5rem;
+  margin: 40px auto;
+  font-size: 1.4rem;
   font-weight: 200;
   width: 75%;
+  text-indent: 10%;
 }
 
 @keyframes expressing {
@@ -188,8 +189,8 @@
 
 @media only screen and (max-width: 600px) {
   .introSpeech {
-    font-size: 1.5rem;
-    width: 100%;
+    font-size: 1.3rem;
+    width: 90%;
   }
 
   .carousel {
@@ -198,6 +199,10 @@
 
   .slide {
     width: 100%;
+  }
+
+  .barContainer {
+    width: 90%;
   }
 
   .eduContainer {

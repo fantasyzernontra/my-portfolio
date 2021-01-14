@@ -13,7 +13,7 @@ const Contact = props => {
         document.documentElement.scrollTop = 0
         document.documentElement.dataset.scroll = 0
         document.body.style.backgroundColor = '#fff'
-         changeNavLinkColor()
+        changeNavLinkColor()
 
     }, [])
 
@@ -41,12 +41,50 @@ const Contact = props => {
     })
 
     const [msgStatus, setMsgStatus] = useState('')
+    const [validated, setValidated] = useState({
+        emailValidated: '',
+        textAreaValidated: ''
+    })
 
     const inputChangeHandler = e => {
-        setMessage({ ...message, [e.target.name]: [e.target.value] })
+        setMessage({ ...message, [e.target.name]: e.target.value })
+    }
+
+    const emailValidation = () => {
+        if (message.email === '') {
+            setValidated({ ...validated, emailValidated: 'Please enter your email' })
+            return false
+        }
+        else if (!message.email.includes(`@`)) {
+            setValidated({ ...validated, emailValidated: 'Please use the proper form of email.' })
+            return false
+        }
+        else {
+            setValidated({ ...validated, emailValidated: '' })
+            return true
+        }
+
+    }
+
+    const textAreaValidation = () => {
+        if (message.msg === '') {
+            setValidated({ ...validated, textAreaValidated: 'Please say something.' })
+            return false;
+        }
+        else {
+            setValidated({ ...validated, textAreaValidated: '' })
+            return true;
+        }
     }
 
     const submitMessage = async () => {
+
+        const emailChecked = emailValidation()
+        const textAreaChecked = textAreaValidation()
+
+        if (!emailChecked || !textAreaChecked)
+            return setMsgStatus('Please enter your email and message.')
+
         await fetch('https://nonnontra-portfolioapi.azurewebsites.net/recieveMessage', {
             method: 'POST',
             mode: 'cors',
@@ -56,7 +94,6 @@ const Contact = props => {
             body: JSON.stringify(message)
         }).then(data => {
             setMsgStatus('Your message has sent.')
-            window.location.reload()
         }).catch(err => setMsgStatus('Something went wrong. Please try again.'))
     }
 
@@ -71,13 +108,16 @@ const Contact = props => {
                         <div className="form">
                             <label htmlFor="name">Name</label>
                             <input name="name" type="text" onChange={inputChangeHandler} value={message.name} />
+                            <div className="validatedBox"></div>
                             <label htmlFor="email">Email</label>
-                            <input name="email" type="text" onChange={inputChangeHandler} value={message.email} />
+                            <input name="email" type="text" onChange={inputChangeHandler} value={message.email} onBlur={emailValidation} />
+                            <div className="validatedBox">{validated.emailValidated}</div>
                             <label html="msg">Your Message</label>
-                            <textarea name="msg" rows="3" onChange={inputChangeHandler} value={message.msg} />
+                            <textarea name="msg" rows="3" onChange={inputChangeHandler} value={message.msg} onBlur={textAreaValidation} />
+                            <div className="validatedBox">{validated.textAreaValidated}</div>
                         </div>
-                        <div>{msgStatus}</div>
                         <div className="buttonDiv">
+                            <div className='msgStatus'>{msgStatus}</div>
                             <button className="messageButton" onClick={submitMessage} >Send Message</button>
                         </div>
                     </div>

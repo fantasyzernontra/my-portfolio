@@ -17,6 +17,7 @@
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
+    color: #fff;
 }
 
 .contactForm {
@@ -25,7 +26,7 @@
     gap: 20px;
     width: 75%;
     border-radius: 10px;
-    background-color: #ff9baa;
+    background-color: #192743;
     padding: 20px;
     box-shadow: 2px 1px 6px black;
 }
@@ -46,7 +47,7 @@
 
 .contactForm .form input {
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1.2rem;
     font-weight: 200;
     padding: 3px;
     font-family: Source Sans Pro, sans-serif;
@@ -54,7 +55,7 @@
 
 .contactForm .form textarea {
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1.2rem;
     font-weight: 200;
     padding: 3px;
     font-family: Source Sans Pro, sans-serif;
@@ -68,11 +69,30 @@
     width: 40%;
     padding: 10px;
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 400;
     border-radius: 4px;
     background-color: #fff;
     font-family: Source Sans Pro, sans-serif;
     box-shadow: 1px 2px 3px black;
+    border: 3px solid #ff6187;
+}
+
+.messageButton:hover, .messageButton:active {
+    background-color: #ff9baa;
+    color: #fff;
+}
+
+.msgStatus {
+    font-size: 1rem;
+    color: #ff6187;
+    display: inline-block;
+}
+
+.validatedBox {
+    height: 15px;
+    padding: 5px;
+    font-size: 1rem;
+    color: #ff6187;
 }
 
 .contactEle {
@@ -97,6 +117,7 @@
 
 .mailDesc {
     font-weight: 200;
+    color: #132743;
 }
 
 .phoneIcon {
@@ -173,5 +194,12 @@
 
     .messageButton {
         width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 768px) {
+    .contactBody {
+        grid-template-columns: repeat(1 ,1fr);
+        gap: 40px;
     }
 }

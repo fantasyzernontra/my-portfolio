@@ -104,18 +104,20 @@ const About = props => {
                     </div>
                 </div>
                 <div className={styles.DescCarousel}>Press the box to see the next picture</div>
-                <section className={`${styles.introSpeech} introspeech`} onScroll={() => document.querySelector('.test').scrollIntoView({ behavior: 'smooth' })}>
+                <div className={`${styles.introSpeech} introspeech`}>
                     I’m a Thai native. I live in Chiangmai, Nothern region of Thailand.
                     Currently, I’m studying Computer Science at King Mongkut’s University of Technology Thonburi.
                     I do curious and passionate about technology and business. I’m eager to learn  about Data Science, Investment,
                     Financial and so on. I love to changellenge myself. My life won’t be excited If it is lacking.
-                    <br /><br />
+                </div>
+                <div className={`${styles.introSpeech} introspeech`}>
                     I intends to enrich our world to be more liveable with my couple of hands. Moreover, I’m a reader and
                     a fitness person. I love to explore and expand my knowledge throughout the book. I always have an exercise
                     such as running, swimming, tennis, weight training.
-                    <br /><br />
-                    If you would like to cooperate with me or would like to have a chat on me with a book or exercise, feel free to contact me.
-                </section>
+                </div>
+                <div className={`${styles.introSpeech} introspeech`}>
+                If you would like to cooperate with me or would like to have a chat on me with a book or exercise, feel free to contact me.
+                </div>
                 <section className={`${styles.barContainer} barpro`}>
                     {data.tools.map(tool => {
                         return (<Aux>

@@ -22,7 +22,7 @@ const Modal = props => {
     carouselImg = propIMG.map((img, index) => {
         let photo = require(`../../pictures/${img.src}`)
         return (
-            <img className={`slides${props.modalName}`} key={index} src={photo.default} alt={img.alt} width="100%" />
+            <img className={`slides${props.modalName}`} key={index} src={photo.default} alt={img.alt} width="80%" />
         )
     })
 
@@ -87,7 +87,7 @@ const Modal = props => {
                             {props.desc}
                         </div>
                         <div className="techStack">Tech Stack</div>
-                        <div>
+                        <div className="techStackDetail">
                             {generateTechStack(props.techStack)}
                         </div>
                     </div>

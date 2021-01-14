@@ -23,7 +23,7 @@ const Homepage = props => {
             navMBele[i].style.color = '#fff'
     }
 
-    const StartingColorEvent = useCallback(e => {      
+    const StartingColorEvent = useCallback(e => {
         const IntroText = document.querySelectorAll('#onetext')
         const NavLink = document.querySelectorAll('#navLink')
         const NavWrapper = document.querySelector('.wrapper')
@@ -35,7 +35,7 @@ const Homepage = props => {
         const supportsAnimationFramed = (window.requestAnimationFrame.constructor === Function);
         if (supportsAnimationFramed) {
             window.requestAnimationFrame(() => {
-                
+
                 if (scrolledAmounts <= 10) {
                     NavWrapper.style.backgroundColor = 'transparent'
                     NavWrapper.style.boxShadow = '0 0 0 #fff'
@@ -99,7 +99,7 @@ const Homepage = props => {
             }, 500)
         }
 
-        
+
     }, [])
 
     useEffect(() => {
@@ -123,7 +123,10 @@ const Homepage = props => {
                 <section className={`${styles.Briefly} two`} id="two">
                     <div className={styles.IntroContainer}>
                         <div className={styles.profile_pic}><img className={styles.profile_picture} src={ProfilePicture} alt="Non Nontra" /></div>
-                        <div className={styles.briefIntro}>I’m a computer science student who hands on with experience on Web-Development. I am interested in technology, data science, business, financial and investment. <br /><br />Moreover, I am a reader and fitness person. </div>
+                        <div className={styles.briefText}>
+                            <div className={styles.briefIntro}>I’m a computer science student who hands on with experience on Web-Development. I am interested in technology, data science, business, financial and investment.</div>
+                            <div className={styles.briefIntro}>Moreover, I am a reader and fitness person. </div>
+                        </div>
                     </div>
                 </section>
             </div>
