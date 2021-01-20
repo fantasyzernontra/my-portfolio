@@ -23,6 +23,7 @@ const Contact = props => {
         const HamLine = document.querySelectorAll('.hamLine')
         const navMobile = document.querySelector('.navMobile')
         const navMBele = document.querySelectorAll('#navMBele')
+        NavWrapper.style.boxShadow = '0 0 0.5em rgba(0, 0, 0, 0.5)'
         NavWrapper.style.backgroundColor = '#fff'
         navMobile.style.backgroundColor = '#fff'
         for (let i = 0; i < NavLink.length; i++)

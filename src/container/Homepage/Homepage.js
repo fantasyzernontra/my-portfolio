@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 
 import Aux from '../../hoc/hoc'
 import ProfilePicture from '../../pictures/Skills/ProfilePicture.webp'
@@ -6,6 +6,8 @@ import ProfilePicture from '../../pictures/Skills/ProfilePicture.webp'
 import styles from './Homepage.module.css'
 
 const Homepage = props => {
+    const [slideinStatus1, setSlideInStatus1] = useState(false)
+    const [slideinStatus2, setSlideInStatus2] = useState(false)
 
     const changeNavLinkColor = () => {
         const NavLink = document.querySelectorAll('#navLink')
@@ -30,6 +32,8 @@ const Homepage = props => {
         const HamLine = document.querySelectorAll('.hamLine')
         const navMBele = document.querySelectorAll('#navMBele')
         const navMobile = document.querySelector('.navMobile')
+        const motto = document.querySelector('#MOTTO')
+        const intro = document.querySelector('#intro')
 
         const scrolledAmounts = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         const supportsAnimationFramed = (window.requestAnimationFrame.constructor === Function);
@@ -65,9 +69,17 @@ const Homepage = props => {
                         navMBele[i].style.color = '#132743'
                 }
 
+
+                if (scrolledAmounts >= (window.innerWidth > 1080) ? intro.offsetTop : intro.offsetTop + 350)
+                    setSlideInStatus2(true)
+
+                if (scrolledAmounts >= (window.innerWidth > 1080) ? motto.offsetTop - 600 : motto.offsetTop + 350)
+                    setSlideInStatus1(true)
             })
         } else {
             setTimeout(() => {
+
+
                 if (scrolledAmounts <= 10) {
                     NavWrapper.style.backgroundColor = 'transparent'
                     NavWrapper.style.boxShadow = '0 0 0 #fff'
@@ -96,6 +108,12 @@ const Homepage = props => {
                     for (let i = 0; i < navMBele.length; i++)
                         navMBele[i].style.color = '#132743'
                 }
+
+                if (scrolledAmounts >= (window.innerWidth > 1080) ? intro.offsetTop : intro.offsetTop + 350)
+                    setSlideInStatus2(true)
+
+                if (scrolledAmounts >= (window.innerWidth > 1080) ? motto.offsetTop - 600 : motto.offsetTop + 350)
+                    setSlideInStatus1(true)
             }, 500)
         }
 
@@ -120,12 +138,16 @@ const Homepage = props => {
                     <div className={styles.Text} id="onetext">Non Nontra<div className={styles.Dot}>.</div></div>
                     <div className={styles.Text} id="onetext">Full Stack Developer<div className={styles.Dot}>.</div></div>
                 </section>
-                <section className={`${styles.Briefly} two`} id="two">
-                    <div className={styles.IntroContainer}>
-                        <div className={styles.profile_pic}><img className={styles.profile_picture} src={ProfilePicture} alt="Non Nontra" /></div>
-                        <div className={styles.briefText}>
-                            <div className={styles.briefIntro}>I’m a computer science student who hands on with experience on Web-Development. I am interested in technology, data science, business, financial and investment.</div>
-                            <div className={styles.briefIntro}>Moreover, I am a reader and fitness person. </div>
+                <section className={styles.Motto}>
+                    <div className={`${styles.mottoheader} ${slideinStatus1 ? styles.slideIn1 : ''}`}>My motto</div>
+                    <div className={`${styles.mottoText} ${slideinStatus1 ? styles.slideIn1 : ''}`} id="MOTTO">If i do something, I would do it PERFECTLY.</div>
+                </section>
+                <section className={`${styles.Briefly}`} id="intro">
+                    <div className={`${styles.IntroContainer} ${slideinStatus2 ? styles.slideIn2 : ''}`}  >
+                        <div className={`${styles.profile_pic} `}><img className={styles.profile_picture} src={ProfilePicture} alt="Non Nontra" /></div>
+                        <div className={`${styles.briefText} `}>
+                            <div className={`${styles.briefIntro} `}>I’m a computer science student who hands on with experience on Web-Development. I am interested in technology, data science, business, financial and investment.</div>
+                            <div className={`${styles.briefIntro} `}>Moreover, I am a reader and fitness person. </div>
                         </div>
                     </div>
                 </section>

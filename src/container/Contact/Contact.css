@@ -1,4 +1,4 @@
-.contactWrapper .contactHeader{
+.contactWrapper .contactHeader {
   font-size: 4rem;
   font-weight: 600;
   margin-bottom: 30px;
@@ -6,200 +6,230 @@
 }
 
 .contactWrapper {
-    width: 85%;
-    margin: 0 auto;
-    text-align: start;
-    font-size: 1.5rem;
+  width: 85%;
+  margin: 0 auto;
+  text-align: start;
+  font-size: 1.5rem;
+  animation: expressing 1s ease forwards 0.5s;
+  opacity: 0;
 }
 
 .contactBody {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    color: #fff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  color: #fff;
 }
 
 .contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 75%;
-    border-radius: 10px;
-    background-color: #192743;
-    padding: 20px;
-    box-shadow: 2px 1px 6px black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 75%;
+  border-radius: 10px;
+  background-color: #192743;
+  padding: 20px;
+  box-shadow: 2px 1px 6px black;
 }
 
 .contactForm .formHeader {
-    font-weight: 400;
-    font-size: 1.5em;
+  font-weight: 400;
+  font-size: 1.5em;
 }
 
 .contactForm .formSubHeader {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .contactForm .form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .contactForm .form input {
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: 200;
-    padding: 3px;
-    font-family: Source Sans Pro, sans-serif;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding: 3px;
+  font-family: Source Sans Pro, sans-serif;
 }
 
 .contactForm .form textarea {
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: 200;
-    padding: 3px;
-    font-family: Source Sans Pro, sans-serif;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding: 3px;
+  font-family: Source Sans Pro, sans-serif;
 }
 
 .buttonDiv {
-    text-align: end;
+  text-align: end;
 }
 
 .messageButton {
-    width: 40%;
-    padding: 10px;
-    font-size: 1rem;
-    font-weight: 400;
-    border-radius: 4px;
-    background-color: #fff;
-    font-family: Source Sans Pro, sans-serif;
-    box-shadow: 1px 2px 3px black;
-    border: 3px solid #ff6187;
+  width: 40%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 4px;
+  background-color: #fff;
+  font-family: Source Sans Pro, sans-serif;
+  box-shadow: 1px 2px 3px black;
+  border: 3px solid #ff6187;
 }
 
-.messageButton:hover, .messageButton:active {
-    background-color: #ff9baa;
-    color: #fff;
+.messageButton:hover,
+.messageButton:active {
+  background-color: #ff9baa;
+  color: #fff;
 }
 
 .msgStatus {
-    font-size: 1rem;
-    color: #ff6187;
-    display: inline-block;
+  font-size: 1rem;
+  color: #ff6187;
+  display: inline-block;
 }
 
 .validatedBox {
-    height: 15px;
-    padding: 5px;
-    font-size: 1rem;
-    color: #ff6187;
+  height: 15px;
+  padding: 5px;
+  font-size: 1rem;
+  color: #ff6187;
 }
 
 .contactEle {
-    display: flex;
-    align-items: center;
-    gap:30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .contactEle > div {
-    margin: 10px 0;
-    display: inline-block;
+  margin: 10px 0;
+  display: inline-block;
 }
 
 .mailIcon {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 50px;
-    width: 50px;
-    background-image: url('../../pictures/mail-icon.png');
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  background-image: url("../../pictures/mail-icon.png");
 }
 
 .mailDesc {
-    font-weight: 200;
-    color: #132743;
+  font-weight: 200;
+  color: #132743;
 }
 
 .phoneIcon {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 50px;
-    width: 50px;
-    background-image: url('../../pictures/tel-icon.jpg');
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  background-image: url("../../pictures/tel-icon.jpg");
 }
 
-.phoneDesc a{
-    color: #132743;
-    text-decoration: none;
-    font-weight: 200;
+.phoneDesc a {
+  color: #132743;
+  text-decoration: none;
+  font-weight: 200;
 }
 
 .phoneDesc a:hover {
-    font-weight: 400;
-    text-decoration: underline;
+  font-weight: 400;
+  text-decoration: underline;
 }
 
 .githubIcon {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 50px;
-    width: 50px;
-    background-image: url('../../pictures/GitHub-Logo.png')
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  background-image: url("../../pictures/GitHub-Logo.png");
 }
 
 .linkedInIcon {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 50px;
-    width: 50px;
-    background-image: url('../../pictures/linkedin-icon.png')
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  background-image: url("../../pictures/linkedin-icon.png");
 }
 
 .gitHubLink a {
-    color: #132743;
-    text-decoration: underline;
+  color: #132743;
+  text-decoration: underline;
 }
 
 .linkedInLink a {
-    color: #132743;
-    text-decoration: underline;
+  color: #132743;
+  text-decoration: underline;
 }
 
 .gitHubLink a:hover {
-    font-weight: 400;
-    text-decoration: underline;
+  font-weight: 400;
+  text-decoration: underline;
 }
 
 .linkedInLink a:hover {
-    font-weight: 400;
-    text-decoration: underline;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+/* Landscape Orientation - Mobile */
+@media only screen and (min-width: 568px) and (max-width: 812px) and (min-height: 320px) and (max-height: 414px) {
+  .contactBody {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+
+  .contactForm {
+      margin: 0 auto;
+  }
+
+  .contactDetails {
+      margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .contactWrapper {
-        font-size: 1.3rem;
-    }
+  .contactWrapper {
+    font-size: 1.3rem;
+  }
 
-    .contactBody {
-        grid-template-columns: repeat(1 ,1fr);
-        gap: 40px;
-    }
+  .contactBody {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
 
-    .contactForm {
-        width: 90%;
-    }
+  .contactForm {
+    width: 90%;
+  }
 
-    .messageButton {
-        width: 50%;
-    }
+  .messageButton {
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 768px) {
-    .contactBody {
-        grid-template-columns: repeat(1 ,1fr);
-        gap: 40px;
-    }
+  .contactBody {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+}
+
+
+@keyframes expressing {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

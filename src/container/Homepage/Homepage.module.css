@@ -33,7 +33,7 @@
 }
 
 .Introduction {
-  animation: fadeIn 1s ease forwards 0.5s;
+  animation: fadeIn 1.8s ease forwards 0.5s;
   opacity: 0;
   transform: translateY(20%);
   transition: 1s;
@@ -45,8 +45,51 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 50px;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(80%);
+}
+
+.Motto {
+  min-height: 30vh;
+  width: 95%;
+  margin: 40px auto;
+}
+
+.Motto .mottoText {
+  font-size: 4rem;
+  margin: 0 auto;
+  transform: translateX(-80%);
+  opacity: 0;
+  font-weight: 200;
+  text-align: center;
+}
+
+.Motto .mottoheader {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 200;
+  transform: translateX(-80%);
+  opacity: 0;
+}
+
+/* .Motto .mottoText::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  background: #ff6187;
+  width: 95%;
+} */
+
+.slideIn1 {
+  animation: slideInJa 2.5s ease forwards;
+}
+
+.slideIn2 {
+  animation: slideInkub 2.2s ease forwards;
 }
 
 .profile_pic {
@@ -124,7 +167,7 @@
   .Briefly .briefIntro {
     font-size: 1.3rem;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
   }
 
   .profile_pic {
@@ -140,6 +183,10 @@
     width: 100%;
     margin: 0 auto;
     text-indent: 10%;
+  }
+
+  .Motto .mottoText {
+    font-size: 2rem;
   }
 }
 
@@ -168,6 +215,42 @@
   .Briefly .briefText {
     width: 100%;
     text-indent: 10%;
+  }
+
+  .Motto .mottoText {
+    font-size: 2rem;
+  }
+}
+
+/* Landscape Orientation - Mobile */
+@media only screen and (min-width: 568px) and (max-width: 812px) and (min-height: 320px) and (max-height: 414px) {
+  .Introduction {
+    font-size: 3.3rem;
+  }
+
+  .IntroContainer {
+    flex-direction: column;
+  }
+
+  .profile_pic {
+    height: 250px;
+    width: 250px;
+  }
+
+  .Briefly {
+    height: 100%;
+  }
+
+  .Briefly .briefText {
+    width: 85%;
+  }
+
+  .Briefly .briefIntro {
+    font-size: 1.3rem;
+  }
+
+  .Motto .mottoText {
+    font-size: 2rem;
   }
 }
 
@@ -224,6 +307,30 @@
   .Briefly .briefText {
     font-size: 2rem;
     width: 75%;
+  }
+}
+
+@keyframes slideInJa {
+  0% {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInkub {
+  0% {
+    opacity: 0;
+    transform: translateX(80%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

@@ -13,7 +13,7 @@
   background-color: #fff;
   transition: .6s;
   opacity: .5;
-  overflow: hidden;
+  overflow: scroll;
   z-index: 20;
   top: 0;
   left: 0;
