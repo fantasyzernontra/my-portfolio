@@ -86,6 +86,7 @@ const Contact = props => {
         if (!emailChecked || !textAreaChecked)
             return setMsgStatus('Please enter your email and message.')
 
+        setMsgStatus('Your message is sending. Please wait.')
         await fetch('https://nonnontra-portfolioapi.azurewebsites.net/recieveMessage', {
             method: 'POST',
             mode: 'cors',
